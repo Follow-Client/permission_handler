@@ -24,22 +24,23 @@ Add the following dependency to your pubspec.yaml file:
 
 Import the Plugin
 ```dart
-import 'package:flutter/material.dart';
 import 'package:permission_handler/permission_handler.dart';
 ```
 Request Permission
 
 ```dart
+// For permission android.permission.READ_CALL_LOG
 Future<void> requestPermission() async {
-  bool result = await PermissionHandler().requestPermission("android.permission.READ_CALL_LOG");
+  bool result = await PermissionHandler().requestPermission(Permissions.readCallLog);
   print("Permission granted: $result");
 }
 ```
 
 Check Permission Status
 ```dart
+// For permission android.permission.READ_CALL_LOG
 Future<void> checkPermission() async {
-  bool result = await PermissionHandler().checkPermissionStatus("android.permission.READ_CALL_LOG");
+  bool result = await PermissionHandler().checkPermissionStatus(Permissions.readCallLog);
   print("Permission status: $result");
 }
 ```
