@@ -21,13 +21,12 @@ Add the following dependency to your pubspec.yaml file:
 ```
 
 ## Usage
-
 Import the Plugin
 ```dart
 import 'package:permission_handler/permission_handler.dart';
 ```
-Request Permission
 
+Request Permission
 ```dart
 // For permission android.permission.READ_CALL_LOG
 Future<void> requestPermission() async {
@@ -45,6 +44,11 @@ Future<void> checkPermission() async {
 }
 ```
 
+## Android Integration
+Add the required permissions in your AndroidManifest.xml:
+```xml
+<uses-permission android:name="android.permission.READ_CALL_LOG"/>
+```
 
 ## Example
 ```dart
@@ -102,15 +106,8 @@ class _MyAppState extends State<MyApp> {
     );
   }
 }
-
 ```
-## Android Integration
-Add the required permissions in your AndroidManifest.xml:
 
-```xml
-<uses-permission android:name="android.permission.READ_CALL_LOG"/>
-```
 ## License
-
 This project is proprietary and owned by Follow Client Company. Unauthorized distribution or modification is not permitted.
 
